@@ -35,12 +35,12 @@ def buyLotsOfFruit(orderList):
     Returns cost of order
     """
     totalCost = 0.0
-    for pair in orderList:
-        if pair[0] not in list(fruitPrices.keys()):
-            print(pair[0], " doesn't appear in fruitPrices.")
+    for fruit, cost in orderList:
+        if fruit not in fruitPrices.keys():
+            print(fruit, " doesn't appear in fruitPrices.")
             return None
         else: 
-            totalCost += pair[1] * fruitPrices[pair[0]] 
+            totalCost += cost * fruitPrices[fruit]
     return totalCost
 
 

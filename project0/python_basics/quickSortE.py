@@ -102,7 +102,7 @@ if __name__ == '__main__':
     end_time2 = time.time()
     # print(test)
     print("Lomuto partition Quick Sort that sorts 1000000 numbers takes: " + "--- %s seconds ---" % (
-                end_time2 - start_time2))
+            end_time2 - start_time2))
     # print(a)
 
 # Note3: below is the implementation for another type of QuickSort:
@@ -160,4 +160,4 @@ if __name__ == '__main__':
     end_time3 = time.time()
     # print(test)
     print("Tony Hoare partition Quick Sort that sorts 1000000 numbers takes: " + "--- %s seconds ---" % (
-                end_time3 - start_time3))
+            end_time3 - start_time3))

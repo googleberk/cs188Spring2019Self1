@@ -31,11 +31,12 @@ def shopSmart(orderList, fruitShops):
     """
 
     min_cost_shop = 0
-    for i in range(len(fruitShops) - 1):
-        if fruitShops[i].getPriceOfOrder(orderList) < fruitShops[i+1].getPriceOfOrder(orderList):
+    # I wrote [code: for i in range(len(fruitShop) - 1)] before, and it is so stupid in that: for example:
+    # if [code: shop = [shop1, shop2]], then len(fruitShop) - 1 would return 2 - 1 = 1, and since range will not
+    # include the upper limit(exclusive), then there is just the first shop left considered.
+    for i in range(len(fruitShops)):
+        if fruitShops[i].getPriceOfOrder(orderList) < fruitShops[min_cost_shop].getPriceOfOrder(orderList):
             min_cost_shop = i
-        else:
-            min_cost_shop = i + 1
     return fruitShops[min_cost_shop]
     
 
